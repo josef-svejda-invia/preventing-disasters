@@ -1,0 +1,18 @@
+# --- Internal, private notes (never published) ---
+/notes/
+
+# --- PHP / Composer ---
+/vendor/
+composer.phar
+
+# --- PHPUnit ---
+/.phpunit.cache/
+.phpunit.result.cache
+/coverage/
+
+# --- Editors / OS ---
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
