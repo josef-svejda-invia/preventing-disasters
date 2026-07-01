@@ -14,6 +14,6 @@ final class UnsafeStateException extends RuntimeException
     public function __construct(
         public readonly MalfunctionEnum $malfunction,
     ) {
-        parent::__construct('MALFUNCTION ' . $this->malfunction->value);
+        parent::__construct(sprintf('MALFUNCTION %d: %s', $malfunction->value, $malfunction->message()));
     }
 }
