@@ -21,4 +21,16 @@ enum ModeEnum
             self::Xray => 'X-ray (photon)',
         };
     }
+
+    /**
+     * FIX #3: the single source of truth for whether this mode needs the X-ray
+     * target in the beam path. Defined once, here — no copies to drift apart.
+     */
+    public function requiresTarget(): bool
+    {
+        return match ($this) {
+            self::Xray => true,
+            self::Electron => false,
+        };
+    }
 }
