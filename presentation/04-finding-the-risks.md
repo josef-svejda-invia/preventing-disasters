@@ -1,5 +1,17 @@
 # 4. Would you ship this?
 
+## Bug 0 — the belief there's no bug
+
+The first bug isn't in the code — it's the assumption there isn't one.
+**"Can't reproduce it on my machine"** → _"so it isn't happening"_ → ticket closed.
+
+That's how the Therac-25 killed a second time: the first Tyler overdose couldn't
+be reproduced, so the machine was declared safe — and three weeks later, at the
+same clinic, it killed again. **"Can't reproduce" means _help me reproduce_ — not
+_won't fix_.**
+
+## The gauntlet
+
 A handful of small functions, one at a time. Each looks clean — the kind of code
 that sails through review. For each: spot what's wrong, see what it does to a
 patient, then the one-line fix.
@@ -11,16 +23,7 @@ They don't _look_ dangerous — and that's exactly what makes them dangerous.
 
 Then the gut-punch. Take the code you just approved, with its **100% green,
 100%-covered** test suite, and run it — not once, but on thousands of realistic
-patients:
-
-```
-$ php bin/simulate.php
-      1 patients treated  ->      0 overdosed / dead
-     10 patients treated  ->      0 overdosed / dead
-    100 patients treated  ->      0 overdosed / dead
-  1,000 patients treated  ->      4 overdosed / dead
- 10,000 patients treated  ->     47 overdosed / dead
-```
+patients — and watch the body count climb.
 
 The bug only fires on a rare ordering (a fast edit). Your tests happened to pick
 a safe path. But **you don't run code once — you run it ten thousand times a
