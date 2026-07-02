@@ -9,7 +9,7 @@ The catch is that "visible" and "noticed" are different things.
 
 ## How to read along
 
-- I drive. You watch, and you call it.
+- I'll show each function; you play the reviewer.
 - Each bug gets the same treatment: _here's the code — would you ship it?_
 - The repo is yours to explore **after** — it's the take-home, not the live medium.
 
