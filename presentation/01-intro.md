@@ -1,6 +1,6 @@
 # 1. Introduction
 
-**Nobody in this room would have caught that in code review. Neither would the AI.**
+**None of us would have caught that in code review. Neither would the AI.**
 
 Today, almost every talk is about how to use AI well. This one is the opposite:
 it's about **what AI will _not_ tell you** — the judgment that lives above the
