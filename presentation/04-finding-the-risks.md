@@ -1,5 +1,17 @@
 # 4. Would you ship this?
 
+## Bug 0 — the belief there's no bug
+
+The first bug isn't in the code — it's the assumption there isn't one.
+**"Can't reproduce it on my machine"** → _"so it isn't happening"_ → ticket closed.
+
+That's how the Therac-25 killed a second time: the first Tyler overdose couldn't
+be reproduced, so the machine was declared safe — and three weeks later, at the
+same clinic, it killed again. **"Can't reproduce" means _help me reproduce_ — not
+_won't fix_.**
+
+## The gauntlet
+
 A handful of small functions, one at a time. Each looks clean — the kind of code
 that sails through review. For each: spot what's wrong, see what it does to a
 patient, then the one-line fix.
