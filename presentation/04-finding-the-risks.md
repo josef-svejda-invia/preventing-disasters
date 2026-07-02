@@ -11,16 +11,7 @@ They don't _look_ dangerous — and that's exactly what makes them dangerous.
 
 Then the gut-punch. Take the code you just approved, with its **100% green,
 100%-covered** test suite, and run it — not once, but on thousands of realistic
-patients:
-
-```
-$ php bin/simulate.php
-      1 patients treated  ->      0 overdosed / dead
-     10 patients treated  ->      0 overdosed / dead
-    100 patients treated  ->      0 overdosed / dead
-  1,000 patients treated  ->      4 overdosed / dead
- 10,000 patients treated  ->     47 overdosed / dead
-```
+patients — and watch the body count climb.
 
 The bug only fires on a rare ordering (a fast edit). Your tests happened to pick
 a safe path. But **you don't run code once — you run it ten thousand times a
