@@ -46,6 +46,14 @@ You can't stop yourself making mistakes. So you build code that survives them �
 - **100% coverage proved nothing.** Test the _safety property_ — that an unsafe
   state is _refused_ — not that the happy path returns non-null.
 
+## Believe the report (the human one)
+
+- **"I can't reproduce it" should mean "help me reproduce it" — not "so it
+  doesn't happen."** The first is curiosity. The second is how people die.
+- AECL couldn't reproduce the first Tyler overdose either, so they closed it and
+  kept the machine running. Three weeks later, it killed again.
+- The person who _can_ reproduce it is your best bug report — not your enemy.
+
 ---
 
 [◀ Would you ship this?](04-finding-the-risks.md) · [Index](README.md) · [Next: Other failures ▶](06-other-disasters.md)
