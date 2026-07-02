@@ -6,7 +6,9 @@ fatal.
 
 ## What went wrong (high level)
 
-- Safety interlocks moved **from hardware into software**.
+- Safety interlocks moved **from hardware into software**. Earlier models had
+  independent **hardware** interlocks that made the unsafe state *physically
+  impossible*; the 25 removed them and trusted software alone.
 - A **race condition** could leave the machine in an unsafe state if an operator
   edited treatment settings quickly.
 - Cryptic error codes were routinely overridden by operators.
@@ -18,6 +20,11 @@ fatal.
 - Each individual flaw looks survivable on its own.
 - Combined, they were lethal.
 - Every flaw has a direct modern-software analogue.
+
+_A genuinely fascinating disaster — worth an evening of reading. The canonical
+account is Leveson & Turner (1993); good summary on
+[Wikipedia](https://en.wikipedia.org/wiki/Therac-25). But we're engineers — so
+let's do the more useful thing and break it ourselves._
 
 ---
 

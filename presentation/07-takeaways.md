@@ -20,8 +20,16 @@ that isn't going anywhere.
 
 ## One ask
 
-Next time you're about to type `// this can't happen` — **write a test, or make
-it loud, instead.** Cover the mistake before someone makes it.
+Next time you're about to type `// this can't happen` — **make it executable
+instead.** A comment is a wish; an assertion is the same words, with teeth:
+
+```php
+// this can't happen                                    // a hope — does nothing
+Assert::false($shouldNeverBeTrue, "This can't happen"); // same words, now it fires
+```
+
+Write the test, or the assert, or the guard — just don't leave it as a comment.
+Cover the mistake before someone makes it.
 
 ---
 

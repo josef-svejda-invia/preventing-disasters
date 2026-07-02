@@ -1,15 +1,11 @@
 # 4. Would you ship this?
 
-The gauntlet. A handful of functions, one at a time. For each:
+A handful of small functions, one at a time. Each looks clean — the kind of code
+that sails through review. For each: spot what's wrong, see what it does to a
+patient, then the one-line fix.
 
-1. **The clean version, on screen.** _Hands up — would you approve this PR?_
-2. **Ten seconds.** _Where's the bug? Shout it._
-3. **The reveal** — the one line, circled, and what it does to a patient.
-4. **A true story** — the real bug this one is modelled on.
-5. **The lesson**, in one line.
-
-Most of these got approved in real code reviews by real teams. Including mine.
-That's the point: they don't _look_ dangerous. That's what makes them dangerous.
+Most of them were approved in real code reviews by real teams. Including mine.
+They don't _look_ dangerous — and that's exactly what makes them dangerous.
 
 ## The climax — "safe every single time"
 

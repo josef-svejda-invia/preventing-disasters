@@ -18,8 +18,8 @@ average — and why that's exactly why it won't replace you.
 > **You will make mistakes. So will your colleagues. So will the AI.**
 > **So: catch them in more than one place — and when you catch one, be LOUD.**
 
-_Hands up — who's ever written `// this should never happen`?_
-(Keep your hand up. This talk is about you, not the engineers of 1985.)
+Everyone here has written `// this should never happen`. I have too. So this isn't
+about judging the engineers of 1985 — it's about us.
 
 ## What we'll do
 

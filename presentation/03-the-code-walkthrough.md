@@ -15,9 +15,6 @@ The catch is that "visible" and "noticed" are different things.
 
 ## The code map (what's on each slide)
 
-Each bug is marked with a `// BUG #n` comment in the source, so the lines below
-are self-locating even as the code moves.
-
 | # | Bug | Where | The tell |
 | - | --- | ----- | -------- |
 | 1 | Swallowed error | `src/Console.php` → `fire()` | `catch (UnsafeStateException) {}` — the interlock throws, nobody listens |
