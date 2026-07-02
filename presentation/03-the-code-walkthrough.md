@@ -13,10 +13,28 @@ The catch is that "visible" and "noticed" are different things.
 - Each bug gets the same treatment: _here's the code — would you ship it?_
 - The repo is yours to explore **after** — it's the take-home, not the live medium.
 
-> _Speaker note:_ code lives ON the slides, syntax-highlighted, big font. The
-> slide is the forcing function that keeps each bug small and fair. Reveal =
-> same slide, circle the one line + show the consequence. Fill concrete
-> file/line references once `src/` exists (see notes/code-plan.md).
+## The code map (what's on each slide)
+
+Each bug is marked with a `// BUG #n` comment in the source, so the lines below
+are self-locating even as the code moves.
+
+| # | Bug | Where | The tell |
+| - | --- | ----- | -------- |
+| 1 | Swallowed error | `src/Console.php` → `fire()` | `catch (UnsafeStateException) {}` — the interlock throws, nobody listens |
+| 2 | Cryptic error | `src/MalfunctionEnum.php`, `src/UnsafeStateException.php` | the operator sees only `MALFUNCTION 54` |
+| 3/4 | Proxy safety check | `src/SafetyCheck.php` → `needsTarget()` | checks the intended **mode**, ignores the real `$highPower` it was handed |
+| 5 | Stale-state race | `src/Console.php` → `editMode()` | a late edit never clears `dataEntryComplete`, so the beam power stays stale |
+| 6 | Counter overflow | `src/SetupTest.php` → `targetConfirmed()` | `class3 % 256` — every 256th call skips the check |
+| — | (honest physics, not a bug) | `src/Beam.php` → `fire()` | high power + no target = 100× dose |
+
+## Run it yourself
+
+- `php bin/console.php` — the cold open: one ordinary treatment, patient dies.
+- `php bin/simulate.php` — scale: `1 → 0, 10 → 0, 100 → 0, 1 000 → 4, 10 000 → 47`.
+- `composer test` — the green suite (looks thorough, all pass).
+  `composer test:flaws` — the safety properties, which **fail on `main`**.
+- `git checkout fixed` — the *same* code, made safe: flaws suite goes green,
+  simulator → `0`.
 
 ---
 

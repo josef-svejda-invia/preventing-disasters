@@ -13,8 +13,8 @@
 
 ## Chernobyl
 
-- Operators were expected to watch **thousands of parameters** (~16k). When
-  everything is an alert, nothing is.
+- Operators faced **thousands of signals** and a wall of alarms with no priority.
+  When everything is an alert, nothing is.
 - Lesson: alert on a **few meaningful signals**, not on everything. Alert fatigue
   is how the real warning gets ignored. (Directly: how we set up monitoring.)
 
@@ -24,10 +24,6 @@
   with the behavior undocumented.
 - Lesson: **single point of failure** + hidden behavior. One sensor, no
   redundancy, no way for the human to know what the software was doing.
-
-> _Speaker note:_ punctuation, not new material — each reinforces a Therac lesson
-> (validate the impossible / loud-not-noisy / defense in depth). Verify the
-> Chernobyl "~16k" figure before stating it (notes/research.md).
 
 ---
 

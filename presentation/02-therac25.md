@@ -19,9 +19,6 @@ fatal.
 - Combined, they were lethal.
 - Every flaw has a direct modern-software analogue.
 
-> _Speaker note:_ keep this factual and brief — the code walkthrough is where it
-> gets concrete. Add a diagram in `assets/` if useful.
-
 ---
 
 [◀ Intro](01-intro.md) · [Index](README.md) · [Next: The code ▶](03-the-code-walkthrough.md)
