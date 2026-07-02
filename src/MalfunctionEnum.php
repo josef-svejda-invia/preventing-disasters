@@ -6,9 +6,6 @@ namespace App;
 
 /**
  * Operator-facing malfunction codes.
- *
- * True to the real machine: a bare number, no explanation. The operator sees
- * "MALFUNCTION 54" and has to reach for the manual (which doesn't help either).
  */
 enum MalfunctionEnum: int
 {

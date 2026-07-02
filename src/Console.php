@@ -43,10 +43,6 @@ final class Console
         $this->plan = $this->plan->withMode($mode);
         $this->turntable->moveFor($mode);
 
-        // BUG #5 (stale-state race): the beam power is only recomputed while data
-        // entry is still "incomplete". After setup has begun the flag is already
-        // true and never cleared, so a late edit moves the turntable but leaves
-        // the beam armed at the previous mode's power.
         if (!$this->dataEntryComplete) {
             $this->highPower = $mode === ModeEnum::Xray;
         }
@@ -54,8 +50,6 @@ final class Console
 
     public function fire(): Dose
     {
-        // BUG #1 (swallowed error): "it kept throwing, so we wrapped it in a
-        // try/catch." The interlock still fires — we just stopped listening.
         try {
             $this->safety->verify($this->plan->mode, $this->highPower, $this->turntable);
         } catch (UnsafeStateException) {

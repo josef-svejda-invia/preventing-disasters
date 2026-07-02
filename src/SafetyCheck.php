@@ -16,9 +16,6 @@ final class SafetyCheck
 
     /**
      * @throws UnsafeStateException if the machine must not fire
-     *
-     * Note the arguments: it is given the real armed beam power ($highPower), but
-     * decides what to check from the intended $mode instead. See needsTarget().
      */
     public function verify(ModeEnum $mode, bool $highPower, Turntable $turntable): void
     {
@@ -32,11 +29,7 @@ final class SafetyCheck
     }
 
     /**
-     * BUG #3 + #4 (drift + "white != duck"): decides whether the target is needed
-     * from the intended MODE — a proxy — instead of from whether the beam is
-     * actually high-powered. This same rule is copy-pasted (and has since drifted)
-     * in Beam and TreatmentSummary. It is correct only by coincidence today, and
-     * it ignores the $highPower it was handed.
+     * Whether this mode requires the X-ray target in the beam path.
      */
     private function needsTarget(ModeEnum $mode): bool
     {

@@ -14,18 +14,13 @@ final class SetupTest
 
     /**
      * @return bool true if the X-ray target is confirmed in place
-     *
-     * BUG #6 (counter-as-flag / overflow): the "already verified" state is
-     * produced by INCREMENTING a one-byte counter that wraps back to 0 every
-     * 256th call. A 0 is treated as "in position — skip the check", so on every
-     * 256th call the real position check is silently bypassed.
      */
     public function targetConfirmed(Turntable $turntable): bool
     {
         $this->class3 = ($this->class3 + 1) % 256;
 
         if ($this->class3 === 0) {
-            return true; // assume OK — the fatal shortcut
+            return true;
         }
 
         return $turntable->position() === TurntablePositionEnum::XrayTarget;
