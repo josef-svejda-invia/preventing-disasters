@@ -17,20 +17,24 @@ Then the gut-punch. Take the code you just approved, with its **100% green,
 100%-covered** test suite, and run it — not once, but on thousands of realistic
 patients:
 
-- 1 patient → fine. 10 → fine. 100 → fine.
-- **10,000 → the bodies start piling up.**
+```
+$ php bin/simulate.php
+      1 patients treated  ->      0 overdosed / dead
+     10 patients treated  ->      0 overdosed / dead
+    100 patients treated  ->      0 overdosed / dead
+  1,000 patients treated  ->      4 overdosed / dead
+ 10,000 patients treated  ->     47 overdosed / dead
+```
 
-The bug only fires on a rare ordering (a fast edit; every Nth setup pass). Your
-tests happened to pick a safe path. But **you don't run code once — you run it
-ten thousand times a day.** At scale, one-in-a-million is Tuesday.
+The bug only fires on a rare ordering (a fast edit). Your tests happened to pick
+a safe path. But **you don't run code once — you run it ten thousand times a
+day.** At scale, one-in-a-million is Tuesday.
+
+_Then_ `git checkout fixed` and run the exact same 10,000 patients: **0 dead.**
+Nothing changed but the code that looked fine either way.
 
 > Rare is not "won't happen." A machine that's 99.99% safe is a body count.
 > It has to be safe **every single time.**
-
-> _Speaker note:_ presentation-led — I drive, no workshop. Hooks are hands-up
-> only (predict + spot-the-bug); no Slido, no pairing. If the room goes quiet,
-> count down and reveal — no dead air. War stories → notes/war-stories.md. The
-> bug list, the 10k set piece, and timings live in notes/talk-script.md (Acts 2–3).
 
 ---
 

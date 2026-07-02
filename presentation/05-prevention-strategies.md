@@ -27,7 +27,7 @@ You can't stop yourself making mistakes. So you build code that survives them �
 ## One source of truth — and when you can't
 
 - One rule, one place. Duplicated rules **drift**, and then nobody can tell a
-  deliberate difference from a bug. ("Interal SvEo" — ask me.)
+  deliberate difference from a bug.
 - Only merge things that are the _same logic_ — look-alike checks that answer
   different questions must stay separate.
 - **When you genuinely can't unify:** link the copies with a `@see` annotation,
@@ -45,10 +45,6 @@ You can't stop yourself making mistakes. So you build code that survives them �
 
 - **100% coverage proved nothing.** Test the _safety property_ — that an unsafe
   state is _refused_ — not that the happy path returns non-null.
-
-> _Speaker note:_ map each bullet back to the exact bug from section 4 (and the
-> commit that fixes it). This is the "here's what I actually do" section — keep
-> it concrete, not a principles lecture.
 
 ---
 

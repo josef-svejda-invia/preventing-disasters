@@ -1,8 +1,5 @@
 # 1. Introduction
 
-> _Cold open — before any slides: run the machine, treat one patient, kill them
-> on screen. Then look up and say it._
-
 **Nobody in this room would have caught that in code review. Neither would the AI.**
 
 Today, almost every talk is about how to use AI well. This one is the opposite:

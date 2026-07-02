@@ -23,10 +23,6 @@ that isn't going anywhere.
 Next time you're about to type `// this can't happen` — **write a test, or make
 it loud, instead.** Cover the mistake before someone makes it.
 
-> _Speaker note:_ re-show the mindset slide, land the AI callback, end on the ask
-> and the repo link. Don't call the discipline "boring" — it's the difference
-> between a live patient and a dead one.
-
 ---
 
 [◀ Other failures](06-other-disasters.md) · [Index](README.md)
