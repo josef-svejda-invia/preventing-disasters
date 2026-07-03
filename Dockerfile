@@ -7,6 +7,10 @@ RUN apt-get update \
     && docker-php-ext-install zip \
     && rm -rf /var/lib/apt/lists/*
 
+# PCOV: a fast line-coverage driver so `composer test:coverage` can produce a report.
+RUN pecl install pcov \
+    && docker-php-ext-enable pcov
+
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 WORKDIR /app
