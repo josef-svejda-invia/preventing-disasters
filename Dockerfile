@@ -7,6 +7,9 @@ RUN apt-get update \
     && docker-php-ext-install zip \
     && rm -rf /var/lib/apt/lists/*
 
+# Trust the mounted project dir so git (invoked by Composer) doesn't warn about ownership.
+RUN git config --global --add safe.directory /app
+
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 WORKDIR /app
