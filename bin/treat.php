@@ -18,7 +18,7 @@ use App\UnsafeStateException;
 // to rip through all of them and land on "Nobody died."
 $options = getopt('', ['seed:', 'delay:', 'max:']);
 $seed = (int) ($options['seed'] ?? 5);
-$delayMs = (int) ($options['delay'] ?? 150);
+$delayMs = (int) ($options['delay'] ?? 0);
 $max = (int) ($options['max'] ?? 10_000);
 
 $sessions = new SessionFactory($seed);
