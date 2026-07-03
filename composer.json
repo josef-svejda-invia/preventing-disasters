@@ -28,7 +28,6 @@
     },
     "scripts": {
         "test": "phpunit --testsuite default",
-        "test:flaws": "phpunit --testsuite flaws",
-        "test:coverage": "phpunit --testsuite default --coverage-text"
+        "test:flaws": "phpunit --testsuite flaws"
     }
 }
